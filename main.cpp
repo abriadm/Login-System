@@ -33,16 +33,43 @@ bool IsLoggedIn()
 
 int main()
 {
-	string username, password;
 	int choice;
-	ofstream file;
-	bool status = IsLoggedIn();
 
 	cout << "1. Register" << endl;
 	cout << "2. Login" << endl;
 	cout << "Your Choice: ";
 	cin >> choice;
 
-	return 0;
+	if (choice == 1)
+	{
+		string username, password;
+
+		cout << "Create Username: ";
+		cin >> username;
+		cout << "Create Password: ";
+		cin >> password;
+
+		ofstream file;
+		file.open("C:\\Users\giveo\OneDrive\Documents\Learn\Learn_C++\C++\Login System" + username + ".txt");
+		file << username << endl;
+		file << password << endl;
+		file.close();
+
+		main();
+	}
+	else if (choice == 2)
+	{
+		bool status = IsLoggedIn();
+
+		if (!status)
+		{
+			cout << "Wrong!!!!!, who the FUCK are You!!!!!!!!" << endl;
+			return 0;
+		}
+		else
+		{
+			cout << "Welcome Back Dumbass!!!!" << endl;
+			return 1;
+		}
+	}
 }
-//bugg
