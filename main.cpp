@@ -61,15 +61,15 @@ int main()
 	{
 		bool status = IsLoggedIn();
 
-		if (!status)
+		if (status)
 		{
 			cout << "Wrong!!!!!, who the FUCK are You!!!!!!!!" << endl;
-			return 0;
+			return false;
 		}
 		else
 		{
 			cout << "Welcome Back Dumbass!!!!" << endl;
-			return 1;
+			return true;
 		}
 	}
 }
