@@ -17,7 +17,7 @@ bool IsLoggedIn()
 	cout << "Enter password: ";
 	cin >> password;
 
-	ifstream read("data\\" + username + ".txt");
+	ifstream read("C:\\Users\giveo\OneDrive\Documents\Learn\Learn_C++\C++\Login System" + username + ".txt");
 	getline(read, un);
 	getline(read, pw);
 
@@ -43,33 +43,6 @@ int main()
 	cout << "Your Choice: ";
 	cin >> choice;
 
-	switch (choice)
-	{
-	case 1:
-		cout << "Create Username: ";
-		cin >> username;
-		cout << "Create Password: ";
-		cin >> password;
-
-		file.open("data\\" + username + ".txt");
-		file << username << endl;
-		file << password << endl;
-		file.close();
-		main();
-		break;
-	case 2:
-		if (!status)
-		{
-			cout << "Wrong!!!!!, who the Fuck are u!!!!!!" << endl;
-		}
-		else
-		{
-			cout << "Welcome Back!!!" << endl;
-		}
-		break;
-	default:
-		break;
-	}
 	return 0;
 }
 //bugg
